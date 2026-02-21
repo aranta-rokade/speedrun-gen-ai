@@ -1,0 +1,5 @@
+# API keys / secrets
+.env
+
+# Output files
+output/

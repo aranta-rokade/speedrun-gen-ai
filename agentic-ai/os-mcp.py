@@ -4,7 +4,10 @@ OS MCP Server — Filesystem Tools
 Exposes filesystem tools (create_folder, create_file, write_to_file)
 via the Model Context Protocol so the agentic AI can discover and call them.
 
-Run:  python os-mcp.py
+Run as separate server:  python os-mcp.py
+Connects on:             http://localhost:8000/sse
+
+pip install mcp
 """
 
 import os
@@ -38,4 +41,4 @@ def write_to_file(file_path: str, file_content: str) -> str:
 
 
 if __name__ == "__main__":
-    mcp.run()
+    mcp.run(transport="sse")

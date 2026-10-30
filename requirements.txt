@@ -1,0 +1,24 @@
+# Core (Gemini, MCP, env)
+google-genai>=2.3.0
+mcp>=1.27.1
+python-dotenv>=1.2.2
+nest-asyncio>=1.6
+rich>=13.0
+
+# Web search notebook
+requests>=2.32
+beautifulsoup4>=4.12
+
+# Hugging Face / RAG notebooks
+transformers>=4.45
+torch>=2.4
+torchvision>=0.19
+timm>=1.0
+sentence-transformers>=3.0
+numpy>=1.26
+pandas>=2.2
+pillow>=10.0
+matplotlib>=3.8
+
+# Notebook runtime
+ipykernel>=6.29

@@ -2,12 +2,6 @@
 
 Generative AI 101 — from prompts to production.
 
-This repo is a hands-on learning workspace covering:
-
-- Foundational LLM usage
-- Hugging Face and Gemini starter notebooks
-- Agentic AI with MCP tools
-- Retrieval-Augmented Generation (RAG) experiments
 
 ## Exercises Done
 
@@ -39,10 +33,14 @@ This repo is a hands-on learning workspace covering:
     - Context-window optimization (history compaction), exponential back-off, timeouts, logging
     - Key lesson: moving from a notebook prototype to a safer .py, production-style architecture
 
-- [x] **[04-rag/](04-rag/RAG.ipynb)** — Retrieval-Augmented Generation chatbot
-  - Embeds Sample articles with `Qwen3-Embedding-0.6B`, retrieves top-5 by cosine similarity
-  - Gemini answers **only** from the retrieved context
-  - Key lesson: grounded answers on domain questions, and "I don't have enough data" on off-topic ones (less hallucination)
+- [x] **[04-rag/](04-rag/)** — Retrieval-Augmented Generation
+  - [x] **[a-RAG.ipynb](04-rag/a-RAG.ipynb)** — Basic RAG chatbot
+    - Embeds Sample articles with `Qwen3-Embedding-0.6B`, retrieves top-5 by cosine similarity
+    - Gemini answers **only** from the retrieved context
+    - Key lesson: grounded answers on domain questions, and "I don't have enough data" on off-topic ones (less hallucination)
+  - [x] **[b-RAG_rerank_chunking_vectorDB.ipynb](04-rag/b-RAG_rerank_chunking_vectorDB.ipynb)** — Production-style RAG pipeline with **chunking, a vector DB, reranking and evals**
+    - SciQ passages chunked into **Pinecone**, retrieved by embedding search then reranked by a cross-encoder; answered by Gemini with a few-shot prompt then, evaluated on test questions, with local **Ollama** as a free option
+    - Key lesson: retrieval quality decides answer quality. Reranking rearranges the relevant documents, and evals to measure the improvement instead of guessing
 
 - [x] **[05-llm-web-search/](05-llm-web-search/LLM_web_search.ipynb)** — LLM + live web search
   - Searches the web with Serper, scrapes pages with BeautifulSoup, Gemini summarizes the results

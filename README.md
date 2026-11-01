@@ -38,7 +38,7 @@ Generative AI 101 — from prompts to production.
     - Embeds Sample articles with `Qwen3-Embedding-0.6B`, retrieves top-5 by cosine similarity
     - Gemini answers **only** from the retrieved context
     - Key lesson: grounded answers on domain questions, and "I don't have enough data" on off-topic ones (less hallucination)
-  - [x] **[b-RAG_rerank_chunking_vectorDB.ipynb](04-rag/b-RAG_rerank_chunking_vectorDB.ipynb)** — Production-style RAG pipeline with **chunking, a vector DB, reranking and evals**
+  - [x] **[b-RAG-rerank-chunking-vectorDB.ipynb](04-rag/b-RAG-rerank-chunking-vectorDB.ipynb)** — Production-style RAG pipeline with **chunking, a vector DB, reranking and evals**
     - SciQ passages chunked into **Pinecone**, retrieved by embedding search then reranked by a cross-encoder; answered by Gemini with a few-shot prompt then, evaluated on test questions, with local **Ollama** as a free option
     - Key lesson: retrieval quality decides answer quality. Reranking rearranges the relevant documents, and evals to measure the improvement instead of guessing
 
